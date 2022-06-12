@@ -27,7 +27,7 @@ _Note that we're only focusing on the design._ The links and inputs don't do any
 > tokens can be found in `/src/constants`. The custom font is
 > Raleway, from Google Fonts.
 
-## Exercise 1: Superheader
+## ~~Exercise 1: Superheader~~
 
 Let's build the “Superheader” a thin grey strip that runs along the top of the page:
 
@@ -35,13 +35,13 @@ Let's build the “Superheader” a thin grey strip that runs along the top of t
 
 Use Flexbox to correctly align the elements within `src/components/SuperHeader`.
 
-## Exercise 2: Header
+## ~~Exercise 2: Header~~
 
 Continuing on down, let's tackle the main header:
 
 ![Close-up screenshot of the header and superheader](./docs/exercise-2-solution.png)
 
-## Exercise 3: Shell
+## ~~Exercise 3: Shell~~
 
 Next up, we want to tackle the "framing" around the shoe grid — the sidebar and title/filter.
 
@@ -49,11 +49,11 @@ Next up, we want to tackle the "framing" around the shoe grid — the sidebar an
 
 _NOTE:_ To make life a bit easier, you may wish to comment out the `<ShoeGrid>` component. We'll work on integrating it in the next exercise.
 
-## Exercise 4: Shoe Grid
+## ~~Exercise 4: Shoe Grid~~
 
 This exercise features two mini-challenges. The second one is a chance to revisit some of the lessons learned in previous modules, and isn't as specific to Flexbox.
 
-### 4A: Grid layout
+### ~~4A: Grid layout~~
 
 Time to tackle the main feature of this application, the shoes!
 
