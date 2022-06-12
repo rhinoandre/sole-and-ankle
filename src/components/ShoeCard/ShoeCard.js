@@ -5,15 +5,6 @@ import { COLORS, WEIGHTS } from '../../constants';
 import { formatPrice, pluralize, isNewShoe } from '../../utils';
 import Spacer from '../Spacer';
 
-const ShoeCard = ({
-  slug,
-  name,
-  imageSrc,
-  price,
-  salePrice,
-  releaseDate,
-  numOfColors,
-}) => {
   // There are 3 variants possible, based on the props:
   //   - new-release
   //   - on-sale
@@ -25,11 +16,24 @@ const ShoeCard = ({
   // both on-sale and new-release, but in this case, `on-sale`
   // will triumph and be the variant used.
   // prettier-ignore
-  const variant = typeof salePrice === 'number'
-    ? 'on-sale'
+function getVariant(salePrice, releaseDate) {
+  return salePrice
+    ? 'onSale'
     : isNewShoe(releaseDate)
-      ? 'new-release'
-      : 'default'
+      ? 'newRelease'
+      : undefined
+}
+
+const ShoeCard = ({
+  slug,
+  name,
+  imageSrc,
+  price,
+  salePrice,
+  releaseDate,
+  numOfColors,
+}) => {
+  const variant = getVariant(salePrice, releaseDate);
 
   return (
     <Link href={`/shoe/${slug}`}>
