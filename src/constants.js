@@ -1,3 +1,6 @@
+const PRIMARY = 'hsl(340deg, 65%, 47%)';
+const SECONDARY = 'hsl(240deg, 60%, 63%)';
+
 export const COLORS = {
   white: 'hsl(0deg, 0%, 100%)',
   gray: {
@@ -7,8 +10,11 @@ export const COLORS = {
     700: 'hsl(220deg, 5%, 40%)',
     900: 'hsl(220deg, 3%, 20%)',
   },
-  primary: 'hsl(340deg, 65%, 47%)',
-  secondary: 'hsl(240deg, 60%, 63%)',
+  primary: PRIMARY,
+  secondary: SECONDARY,
+
+  newRelease: SECONDARY,
+  onSale: PRIMARY,
 };
 
 export const WEIGHTS = {
