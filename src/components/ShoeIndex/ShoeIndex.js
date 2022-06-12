@@ -12,6 +12,17 @@ import ShoeGrid from '../ShoeGrid';
 const ShoeIndex = ({ sortId, setSortId }) => {
   return (
     <Wrapper>
+      <LeftColumn>
+        <Breadcrumbs>
+          <Breadcrumbs.Crumb href="/">Home</Breadcrumbs.Crumb>
+          <Breadcrumbs.Crumb href="/sale">Sale</Breadcrumbs.Crumb>
+          <Breadcrumbs.Crumb href="/sale/shoes">
+            Shoes
+          </Breadcrumbs.Crumb>
+        </Breadcrumbs>
+        <Spacer size={42} />
+        <ShoeSidebar />
+      </LeftColumn>
       <MainColumn>
         <Header>
           <Title>Running</Title>
@@ -27,30 +38,28 @@ const ShoeIndex = ({ sortId, setSortId }) => {
         <Spacer size={34} />
         <ShoeGrid />
       </MainColumn>
-      <LeftColumn>
-        <Breadcrumbs>
-          <Breadcrumbs.Crumb href="/">Home</Breadcrumbs.Crumb>
-          <Breadcrumbs.Crumb href="/sale">Sale</Breadcrumbs.Crumb>
-          <Breadcrumbs.Crumb href="/sale/shoes">
-            Shoes
-          </Breadcrumbs.Crumb>
-        </Breadcrumbs>
-        <Spacer size={42} />
-        <ShoeSidebar />
-      </LeftColumn>
     </Wrapper>
   );
 };
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  display: flex;
+`;
 
-const LeftColumn = styled.div``;
+const LeftColumn = styled.div`
+  flex: 1;
+`;
 
-const MainColumn = styled.div``;
+const MainColumn = styled.div`
+  flex: 3;
+`;
 
-const Header = styled.header``;
+const Header = styled.header`
+  display: flex;
+`;
 
 const Title = styled.h2`
+  margin-right: auto;
   font-size: 1.5rem;
   font-weight: ${WEIGHTS.medium};
 `;
